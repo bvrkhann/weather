@@ -3,9 +3,10 @@ import coldBg from "./assets/cold.jpg";
 import Descriptions from "./components/Descriptions";
 import { useEffect, useState } from "react";
 import { getFormattedWeatherData } from "./weatherService";
+import TopButtons from "./components/TopButtons";
 
 function App() {
-  const [city, setCity] = useState("Kaskelen");
+  const [city, setCity] = useState("Paris");
   const [weather, setWeather] = useState(null);
   const [units, setUnits] = useState("metric");
   const [bg, setBg] = useState(hotBg);
@@ -43,6 +44,9 @@ function App() {
   return (
     <div className="app" style={{ backgroundImage: `url(${bg})` }}>
       <div className="overlay">
+        <div>
+          <TopButtons setCity={setCity} />
+        </div>
         {weather && (
           <div className="container">
             <div className="section section__inputs">

@@ -1,0 +1,22 @@
+
+
+.nav{
+    display: flex;
+    
+    gap: 70px;
+    text-decoration: none;
+    
+}
+
+.nav li {
+    list-style: none;
+    color: white;
+    cursor: pointer;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 25px;
+}
+
+.left{
+    margin-left: 405px;
+}
+
